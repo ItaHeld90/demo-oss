@@ -1,0 +1,27 @@
+{
+  "name": "oss-demo",
+  "version": "1.0.0",
+  "description": "oss tutorial project",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ItaHeld90/demo-oss.git"
+  },
+  "keywords": [
+    "demo",
+    "oss",
+    "tutorial"
+  ],
+  "author": "Itamar Held <itaheld1990@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ItaHeld90/demo-oss/issues"
+  },
+  "homepage": "https://github.com/ItaHeld90/demo-oss#readme",
+  "dependencies": {
+    "unique-random-array": "1.0.1"
+  }
+}
