@@ -4,7 +4,7 @@
   "description": "oss tutorial project",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha src/index.test.js -w"
   },
   "repository": {
     "type": "git",
@@ -23,5 +23,9 @@
   "homepage": "https://github.com/ItaHeld90/demo-oss#readme",
   "dependencies": {
     "unique-random-array": "1.0.1"
+  },
+  "devDependencies": {
+    "chai": "4.1.2",
+    "mocha": "5.2.0"
   }
 }
