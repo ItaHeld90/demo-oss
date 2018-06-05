@@ -4,7 +4,8 @@
   "description": "oss tutorial project",
   "main": "src/index.js",
   "scripts": {
-    "test": "mocha src/index.test.js -w"
+    "test": "mocha src/index.test.js -w",
+    "test:single": "mocha src/index.test.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,12 @@
   },
   "devDependencies": {
     "chai": "4.1.2",
+    "ghooks": "2.0.4",
     "mocha": "5.2.0"
+  },
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm run test:single"
+    }    
   }
 }
