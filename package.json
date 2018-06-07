@@ -1,11 +1,13 @@
 {
   "name": "oss-demo",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "oss tutorial project",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "mocha src/index.test.js -w",
-    "test:single": "mocha src/index.test.js"
+    "test": "mocha src/index.test.js -w --compilers js:babel-register",
+    "test:single": "mocha src/index.test.js --compilers js:babel-register",
+    "prebuild": "rimraf dist",
+    "build": "babel src --out-dir dist --copy-files --ignore *.test.js"
   },
   "repository": {
     "type": "git",
@@ -15,6 +17,9 @@
     "demo",
     "oss",
     "tutorial"
+  ],
+  "files": [
+    "dist"
   ],
   "author": "Itamar Held <itaheld1990@gmail.com>",
   "license": "MIT",
@@ -26,13 +31,17 @@
     "unique-random-array": "1.0.1"
   },
   "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-preset-env": "1.7.0",
+    "babel-register": "6.26.0",
     "chai": "4.1.2",
     "ghooks": "2.0.4",
-    "mocha": "5.2.0"
+    "mocha": "5.2.0",
+    "rimraf": "2.6.2"
   },
   "config": {
     "ghooks": {
       "pre-commit": "npm run test:single"
-    }    
+    }
   }
 }

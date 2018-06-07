@@ -1,5 +1,5 @@
-var someNames = require('./some-names.json');
-var uniqueRandomArray = require('unique-random-array');
+import someNames from './some-names.json';
+import uniqueRandomArray from 'unique-random-array';
 
 module.exports = {
     all: someNames,
